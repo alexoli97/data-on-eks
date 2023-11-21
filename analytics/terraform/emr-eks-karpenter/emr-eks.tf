@@ -2,7 +2,7 @@ module "emr_containers" {
   source  = "terraform-aws-modules/emr/aws//modules/virtual-cluster"
   version = "~> 1.0"
 
-  for_each = toset(["data-team-a", "data-team-b"])
+  for_each = toset(["data-team-a"])
 
   eks_cluster_id    = module.eks.cluster_name
   oidc_provider_arn = module.eks.oidc_provider_arn
