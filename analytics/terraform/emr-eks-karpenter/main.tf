@@ -39,11 +39,11 @@ data "aws_ecrpublic_authorization_token" "token" {
   provider = aws.ecr
 }
 
-# This ECR "registry_id" number refers to the AWS account ID for us-west-2 region
+# This ECR "registry_id" number refers to the AWS account ID for eu-west-1 region
 # if you are using a different region, make sure to change it, you can get the account from the link below
 # https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/docker-custom-images-tag.html
 data "aws_ecr_authorization_token" "token" {
-  registry_id = "895885662937"
+  registry_id = "483788554619"
 }
 
 data "aws_caller_identity" "current" {}
